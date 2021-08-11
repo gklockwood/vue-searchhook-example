@@ -12,8 +12,8 @@ export default function useSearch(items, searchProp) {
             filteredItems = items.filter((item) =>
                 item[searchProp].toLowerCase().includes(activeSearchTerm.value.toLowerCase())
             );
-        } else if (items) {
-            filteredItems = items;
+        } else if (items.vaue) {
+            filteredItems = items.value;
         }
         return filteredItems;
     });
